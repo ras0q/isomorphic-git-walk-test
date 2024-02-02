@@ -27,6 +27,7 @@ const diff = async (trees: Walker[]) => {
   await git.walk({
     ...opt,
     trees: trees,
+    // deno-lint-ignore require-await
     map: async (filepath, _) => {
       return filepath;
     },
